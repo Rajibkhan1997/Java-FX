@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.ProjectManagementController">
+    <TextField fx:id="projectNameField" promptText="Project Name" />
+    <TextArea fx:id="projectDescriptionArea" promptText="Project Description" />
+    <Button text="Create Project" onAction="#createProject" />
+
+    <TextField fx:id="taskNameField" promptText="Task Name" />
+    <TextArea fx:id="taskDescriptionArea" promptText="Task Description" />
+    <DatePicker fx:id="taskStartDatePicker" promptText="Start Date" />
+    <DatePicker fx:id="taskEndDatePicker" promptText="End Date" />
+
+    <Button text="Add Task" onAction="#addTask" />
+    <Button text="Remove Task" onAction="#removeTask" />
+    <Button text="Edit Project" onAction="#editProject" />
+    <Button text="Edit Task" onAction="#editTask" />
+    <Button text="Save Project" onAction="#saveProject" />
+    <Button text="Load Project" onAction="#loadProject" />
+
+    <TableView fx:id="taskTableView">
+        <columns>
+            <TableColumn fx:id="taskNameColumn" text="Task Name" />
+            <!-- Add more columns as needed -->
+        </columns>
+    </TableView>
+</VBox>
