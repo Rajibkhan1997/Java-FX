@@ -1,3 +1,4 @@
+// HelloApplication.java
 package com.example.demo4;
 
 import javafx.application.Application;
@@ -19,10 +20,13 @@ public class HelloApplication extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     public static void main(String[] args) {
         launch();
+    }
+
+    public static KotlinTaskGraph getKotlinTaskGraph() {
+        return new KotlinTaskGraph(); // Instantiate KotlinTaskGraph directly
     }
 }
